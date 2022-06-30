@@ -8,10 +8,9 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 // 引入路由组建
-const Home = () => import('@/pages/home')
+const Searchhome = () => import('@/pages/searchhome')
 const List = () => import('@/pages/list')
-const Middle = () => import('@/pages/middle')
-const Table = () => import('@/pages/table')
+const Login = () => import('@/pages/login')
 
 
 //保存原型对象的Pushs
@@ -46,38 +45,51 @@ VueRouter.prototype.replace = function (location, res, rej) {
         {
             name:'home',
             path:"/home",
-            components:{
-                one:Home,
-                two:List
-            },
+            component:List,
             meta:{
                 footshow:true
             }
         },
         {
-            name:'list',
-            path:"/list/:keyword",
-            components:{
-                one:Middle,
-                two:Table
+          name:'searchlist',
+          path:"/search",
+          component:Searchhome,
+          meta:{
+              footshow:true
+          }
+      },
+      {
+        name:'login',
+        path:"/login",
+        component:Login,
+        meta:{
+            footshow:true
+        }
+    },
+        // {
+        //     name:'list',
+        //     path:"/list/:keyword",
+        //     components:{
+        //         one:Middle,
+        //         two:Table
                 
-            },
-            meta:{
-              footshow:false
-            }
-        },
-        {
-            name:'middle',
-            path:"/middle",
-            components:{
-                one:List,
-                two:Middle
+        //     },
+        //     meta:{
+        //       footshow:false
+        //     }
+        // },
+        // {
+        //     name:'middle',
+        //     path:"/middle",
+        //     components:{
+        //         one:List,
+        //         two:Middle
                 
-            },
-            meta:{
-              footshow:false
-            }
-        },
+        //     },
+        //     meta:{
+        //       footshow:false
+        //     }
+        // },
         {
             path:"*",
             redirect:"Home"

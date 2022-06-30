@@ -4,7 +4,7 @@
         <div class="top_pisition">浙江</div>
         <div class="top_shoose">
             <div class="top_choose_inner">
-                <div>请登录</div>
+                <div @click="gotologin">请登录</div>
                 <div>免费注册</div>
                 <div>我的订单</div>
                 <div>我的京东</div>
@@ -35,7 +35,9 @@ export default {
 
   },
   methods: {
-    
+    gotologin(){
+        this.$router.push('./login')
+    }
   },
 };
 </script>
@@ -47,6 +49,7 @@ export default {
     height: 30px;
     font-size: 14px;
     color: rgb(139, 137, 137);
+    
 }
 .top_main{
     width: 1190px;
