@@ -3,7 +3,7 @@
         <div class="head">
             <div class="head_img" @click="gotohome"></div>
             <div class="head_search">
-                <div class="search"><input type="text" value="111" v-model="searchvalue" /></div>
+                <div class="search"><input type="text" value="111" v-model="searchvalue" ref="searchvalue" @change="searchinput"/></div>
                 <div class="btn_search" @click="gotosearchhome" >搜索</div>
                 <div class="search_tishi">
                     <div>环球影城</div>
@@ -59,11 +59,15 @@ export default {
             name:'home'
         })
         this.searchvalue='';
+    },
+    searchinput(){
+        this.$store.state.home.bbb=this.$refs.searchvalue;
     }
   },
   mounted : function(){
     
-  }
+  },
+  
 };
 </script>
 

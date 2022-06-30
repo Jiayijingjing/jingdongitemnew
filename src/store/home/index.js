@@ -1,6 +1,7 @@
 
 const state = {
-    aaa:100
+    aaa:'',
+    bbb:{}
 };
 
 const mutations = {
@@ -8,7 +9,7 @@ const mutations = {
 };
 
 const actions = {
-    
+
 };
 
 const getters = {

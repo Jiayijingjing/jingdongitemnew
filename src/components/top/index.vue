@@ -36,7 +36,11 @@ export default {
   },
   methods: {
     gotologin(){
-        this.$router.push('./login')
+         this.$router.push({
+            name:'login'
+        })
+        this.$store.state.home.bbb.value= '';
+        
     }
   },
 };
