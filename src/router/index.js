@@ -49,14 +49,16 @@ VueRouter.prototype.replace = function (location, res, rej) {
             meta:{
                 footshow:true
             }
+          
         },
         {
           name:'searchlist',
-          path:"/search",
+          path:"/search/:keyword?", // ? 代表此数据可传递也可不传递
           component:Searchhome,
           meta:{
               footshow:true
-          }
+          },
+          
       },
       {
         name:'login',
@@ -65,6 +67,7 @@ VueRouter.prototype.replace = function (location, res, rej) {
         meta:{
             footshow:true
         }
+      
     },
         // {
         //     name:'list',

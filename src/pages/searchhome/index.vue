@@ -135,7 +135,11 @@ export default {
   name: 'Searchhome',
   props: {
     
+  },
+  methods:{
+    
   }
+
 }
 </script>
 

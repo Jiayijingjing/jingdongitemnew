@@ -3,8 +3,8 @@
         <div class="head">
             <div class="head_img" @click="gotohome"></div>
             <div class="head_search">
-                <div class="search"><input type="text" value="111" ></div>
-                <div class="btn_search" @click="gotosearchhome">搜索</div>
+                <div class="search"><input type="text" value="111" v-model="searchvalue" /></div>
+                <div class="btn_search" @click="gotosearchhome" >搜索</div>
                 <div class="search_tishi">
                     <div>环球影城</div>
                     <div>环球影城</div>
@@ -39,6 +39,7 @@ export default {
   name: '',
   data() {
     return {
+        searchvalue:""
     };
   },
   computed:{
@@ -47,13 +48,22 @@ export default {
   },
   methods: {
     gotosearchhome(){
-        this.$router.push('./search')
-     
+        this.$router.push({
+            name:'searchlist',
+            params:{keyword:this.searchvalue || undefined }  //undefined 解决所传数据为空字符串报错
+        })
     },
     gotohome(){
-        this.$router.push('./home')
+        
+        this.$router.push({
+            name:'home'
+        })
+        this.searchvalue='';
     }
   },
+  mounted : function(){
+    
+  }
 };
 </script>
 

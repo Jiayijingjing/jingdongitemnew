@@ -34,5 +34,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 
 }
-
+body {overflow-y: scroll;
+}
 </style>

@@ -49,7 +49,7 @@ export default {
     height: 30px;
     font-size: 14px;
     color: rgb(139, 137, 137);
-    
+    border-top:1px solid red;
 }
 .top_main{
     width: 1190px;
