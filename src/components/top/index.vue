@@ -1,11 +1,11 @@
 <template>
   <div class="top">
     <div class="top_main">
-        <div class="top_pisition">浙江</div>
+        <div class="top_pisition">{{ceshidata}}</div>
         <div class="top_shoose">
             <div class="top_choose_inner">
                 <div @click="gotologin">请登录</div>
-                <div>免费注册</div>
+                <div @click="ceshiajaxx">免费注册</div>
                 <div>我的订单</div>
                 <div>我的京东</div>
                 <div>京东会员</div>
@@ -29,7 +29,9 @@ export default {
     };
   },
   computed:{
-
+        ceshidata(){
+            return this.$store.state.home.ccc.from;
+        }
   },
   watch:{
 
@@ -41,8 +43,14 @@ export default {
         })
         this.$store.state.home.bbb.value= '';
         
+    },
+    ceshiajaxx(){
+        this.$store.dispatch('ceshiaxios')
     }
   },
+  mounted(){
+    //  this.$store.dispatch('ceshiaxios');
+  }
 };
 </script>
 
@@ -53,12 +61,11 @@ export default {
     height: 30px;
     font-size: 14px;
     color: rgb(139, 137, 137);
-    border-top:1px solid red;
+  
 }
 .top_main{
     width: 1190px;
     height: 30px;
-   
     margin: 0 auto;
     display: flex;
     flex-direction: wrap;
@@ -66,7 +73,6 @@ export default {
     justify-content: space-between;
 }
 .top_pisition{
-
     width: 60px;
     height: 30px;
     line-height: 30px;

@@ -53,10 +53,10 @@ VueRouter.prototype.replace = function (location, res, rej) {
         },
         {
           name:'searchlist',
-          path:"/search/:keyword", // ? 代表此数据可传递也可不传递
+          path:"/search/:keyword?", // ? 代表此数据可传递也可不传递
           component:Searchhome,
           meta:{
-              footshow:true
+              footshow:false
           },
           
       },
@@ -65,7 +65,7 @@ VueRouter.prototype.replace = function (location, res, rej) {
         path:"/login",
         component:Login,
         meta:{
-            footshow:true
+            footshow:false
         }
       
     },
@@ -95,7 +95,7 @@ VueRouter.prototype.replace = function (location, res, rej) {
         // },
         {
             path:"*",
-            redirect:"Home"
+            redirect:"/home"
         }
     ]
 })

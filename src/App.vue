@@ -3,7 +3,7 @@
     <Top />
     <Head />
     <router-view ></router-view>
-    <Bottom />
+    <Bottom v-show="$route.meta.footshow"/>
     <Foot />
   </div>
 </template>

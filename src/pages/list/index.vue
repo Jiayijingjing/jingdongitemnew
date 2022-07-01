@@ -78,6 +78,7 @@
 
 <script>
 import Sanjilist from './sanjilist'
+// import _ from "lodash"
 
 export default {
   name: 'HelloWorld',
@@ -89,6 +90,9 @@ export default {
   },
   components:{
     Sanjilist
+  },
+  mounted(){
+   
   }
 }
 </script>
@@ -281,7 +285,7 @@ export default {
 }
 .main_3{
     width: 100%;
-    height:996px;
+    
 }
 .main_3_1{
     display: flex;
