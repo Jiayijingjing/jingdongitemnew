@@ -171,7 +171,7 @@ export default {
     background-color: white;
     padding: 20px;
     border: 2px solid rgb(228, 225, 225);
-    
+    z-index:999999999999999;
 }
 .erji_title{
     display: flex;
