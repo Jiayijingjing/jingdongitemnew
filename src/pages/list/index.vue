@@ -5,7 +5,30 @@
             <div class="main_1">
                 <Nav />
                 <div class="main_hui"></div>
-                <div class="main_1_2"></div>
+                <div class="main_1_2">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/datu.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/zhutu02.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/zhutu03.jpg" />
+                            </div>
+                        </div>
+                        <!-- 如果需要分页器 -->
+                        <div class="swiper-pagination">1</div>
+                        
+                        <!-- 如果需要导航按钮 -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        
+                        <!-- 如果需要滚动条 -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                </div>
                 <div class="main_hui"></div>
                 <div class="main_1_3">
                     <div></div>
@@ -77,8 +100,8 @@
 </template>
 
 <script>
-// import Sanjilist from '../../components/sanjilist'
-// import _ from "lodash"
+import Swiper from 'swiper';
+
 
 export default {
   name: 'HelloWorld',
@@ -92,7 +115,27 @@ export default {
   
   },
   mounted(){
-   
+    var mySwiper = new Swiper ('.swiper-container ', {
+        // direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+        
+        // 如果需要分页器
+        pagination: {
+        el: '.swiper-pagination',
+        clickable:true,
+        },
+        
+        // 如果需要前进后退按钮
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        
+        // 如果需要滚动条
+        // scrollbar: {
+        // el: '.swiper-scrollbar',
+        // },
+    })        
   }
 }
 </script>
@@ -141,13 +184,18 @@ export default {
     height: 100%;
     background-color: white
 }
-.main_1_2{
+/* .main_1_2{
     width:590px ;
-    height: 480px;
-    background-image: url(./img/datu.jpg);
-    background-size: 100% 100%;
+    height: 480px; 
+     background-image: url(./img/datu.jpg); 
+     background-size: 100% 100%;
     
-}
+} */
+
+.swiper-container {
+   width:590px ;
+   height: 480px;
+}  
 .main_1_3{
     width:190px;
     height: 480px;
