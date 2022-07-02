@@ -118,6 +118,7 @@ export default {
 }
 .totalsold{
     width: 190px;
+    
     background-color: rgb(184, 4, 4);
     text-align: center;
     z-index: 9999999;
@@ -126,13 +127,13 @@ export default {
     font-size: 16px;
     color:white;
     font-weight: 700;
-    line-height: 24px;
-    height: 24px;
+    line-height: 34px;
+    height: 34px;
 }
 .sanjishowlist{
     background-color: red;
     color:black;
-    margin-top:10px;
+    
   
     z-index: 9999;
 }
