@@ -3,7 +3,7 @@
     <div class="main">
         <div class="main_text">
             <div class="main_1">
-                <Sanjilist />
+                <Nav />
                 <div class="main_hui"></div>
                 <div class="main_1_2"></div>
                 <div class="main_hui"></div>
@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import Sanjilist from './sanjilist'
+// import Sanjilist from '../../components/sanjilist'
 // import _ from "lodash"
 
 export default {
@@ -89,7 +89,7 @@ export default {
     
   },
   components:{
-    Sanjilist
+  
   },
   mounted(){
    

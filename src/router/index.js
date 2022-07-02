@@ -47,7 +47,8 @@ VueRouter.prototype.replace = function (location, res, rej) {
             path:"/home",
             component:List,
             meta:{
-                footshow:true
+                footshow:true,
+                sanji:false
             }
           
         },
@@ -56,7 +57,8 @@ VueRouter.prototype.replace = function (location, res, rej) {
           path:"/search/:keyword?", // ? 代表此数据可传递也可不传递
           component:Searchhome,
           meta:{
-              footshow:false
+              footshow:false,
+              sanji:true
           },
           
       },
@@ -65,7 +67,8 @@ VueRouter.prototype.replace = function (location, res, rej) {
         path:"/login",
         component:Login,
         meta:{
-            footshow:false
+            footshow:false,
+            sanji:false
         }
       
     },

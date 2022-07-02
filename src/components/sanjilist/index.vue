@@ -107,7 +107,7 @@
 import _ from "lodash"
 
 export default {
-  name: 'sanjilist',
+  name: 'Nav',
   data() {
     return {
         erjishow:false,
@@ -152,6 +152,9 @@ export default {
     padding-top: 15px;
     padding-bottom: 15px;
     position:relative;
+    background-color: white;
+    
+
 }
 .main_1_1_1 div{
     height: 25px;

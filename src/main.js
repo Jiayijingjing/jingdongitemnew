@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
-import router from '@/router'
 
+//注册全局组件
+import Nav from '@/components/sanjilist'
+Vue.component('Nav',Nav);
+
+import router from '@/router'
 
 Vue.config.productionTip = false
 

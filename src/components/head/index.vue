@@ -1,7 +1,15 @@
 <template>
    <div class="total_main">
         <div class="head">
-            <div class="head_img" @click="gotohome"></div>
+            <div class="head_img" @click="gotohome">
+                <div class="head_tu"><img src="./img/jing.png"   /></div>
+                <div class="totalsold" @mouseover="showsanji"  @mouseleave="nosanji" >
+                    <div class="totalbiaoti">全部商品分类</div>
+                    <div class="sanjishowlist" >
+                        <Nav v-show="sanjishowbtn"/>
+                    </div>
+                </div>
+            </div>
             <div class="head_search">
                 <div class="search"><input type="text" value="111" v-model="searchvalue" ref="searchvalue" @change="searchinput"/></div>
                 <div class="btn_search" @click="gotosearchhome" >搜索</div>
@@ -13,7 +21,6 @@
                     <div>环球影城</div>
                     <div>环球影城</div>
                     <div>环球影城</div>
-                    
                 </div>
                 <div class="main_btn">
                     <div>秒杀</div>
@@ -39,7 +46,8 @@ export default {
   name: '',
   data() {
     return {
-        searchvalue:""
+        searchvalue:"",
+        sanjishowbtn:false
     };
   },
   computed:{
@@ -62,7 +70,18 @@ export default {
     },
     searchinput(){
         this.$store.state.home.bbb=this.$refs.searchvalue;
+    },
+    showsanji(){
+        if(this.$route.name == 'searchlist'){
+            this.sanjishowbtn = true;
+        }
+    },
+    nosanji(){
+        if(this.$route.name == 'searchlist'){
+            this.sanjishowbtn = false;
+        }
     }
+
   },
   mounted : function(){
     
@@ -84,16 +103,40 @@ export default {
     flex-direction: wrap;
 }
 .head_img{
-    background-image: url('./img/jing.png');
-    width: 120px;
-    height: 120px;
+    margin-right: 90px;
+    display: flex;
+    flex-direction: column;
+}
+.head_tu img{
+    width: 98px;
+    height: 98px;
+     background-image: url('./img/jing.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-right: 90px;
+    z-index: 9999999;
+}
+.totalsold{
+    width: 190px;
+    background-color: rgb(184, 4, 4);
+    text-align: center;
+    z-index: 9999999;
+}
+.totalbiaoti{
+    font-size: 16px;
+    color:white;
+    font-weight: 700;
+    line-height: 24px;
+    height: 24px;
+}
+.sanjishowlist{
+    background-color: red;
+    color:black;
+    margin-top:10px;
+  
+    z-index: 9999;
 }
 .head_search{
-  
     margin-top: 18px;
     width:620px ;
     height: 32px;
