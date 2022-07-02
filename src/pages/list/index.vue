@@ -184,18 +184,20 @@ export default {
     height: 100%;
     background-color: white
 }
-/* .main_1_2{
-    width:590px ;
-    height: 480px; 
-     background-image: url(./img/datu.jpg); 
-     background-size: 100% 100%;
+.main_1_2{
     
-} */
-
+    height: 480px; 
+    
+    
+} 
 .swiper-container {
    width:590px ;
    height: 480px;
-}  
+} 
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
 .main_1_3{
     width:190px;
     height: 480px;

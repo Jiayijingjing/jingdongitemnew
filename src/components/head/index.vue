@@ -103,7 +103,7 @@ export default {
     flex-direction: wrap;
 }
 .head_img{
-    margin-right: 90px;
+    margin-right: 30px;
     display: flex;
     flex-direction: column;
 }
