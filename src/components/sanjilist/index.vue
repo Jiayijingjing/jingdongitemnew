@@ -135,10 +135,10 @@ export default {
         this.changeIndex = -1;
     },
     searchlist_2(e){
-
+        this.erjishow = false;
         this.$router.push({
             name: 'searchlist',
-            query:{listparams:e.target.dataset.search}
+            query:{listparams:2}
         });
        
     }
