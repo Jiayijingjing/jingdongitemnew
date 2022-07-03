@@ -22,81 +22,74 @@
     </div>
     <div class="erji" v-show="erjishow">
         <div class="erji_title">
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
         </div>
         <div class="erji_list">
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
         </div>
         <div class="erji_list">
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
         </div>
         <div class="erji_list">
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
         </div>
         <div class="erji_list">
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
         </div>
         <div class="erji_list">
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
         </div>
         <div class="erji_list">
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
-            <div>箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
+            <div @click="searchlist_2" data-search="5">箱包</div>
         </div>
 
     </div>
@@ -140,6 +133,14 @@ export default {
 
     deleteblue(){
         this.changeIndex = -1;
+    },
+    searchlist_2(e){
+
+        this.$router.push({
+            name: 'searchlist',
+            query:{listparams:e.target.dataset.search}
+        });
+       
     }
   },
 };
