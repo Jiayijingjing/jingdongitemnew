@@ -1,99 +1,101 @@
 <template>
-  <div class="main_1_1" @mousemove="erjilistshow" @mouseout="erjinone" @mouseleave="deleteblue">
-    <div class="main_1_1_1">
-        <div @mouseenter="changeblue(1)" index=1 :class="{blue:changeIndex == 1}" >家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(2)" index=2 :class="{blue:changeIndex == 2}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(3)" index=3 :class="{blue:changeIndex == 3}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(4)" index=4 :class="{blue:changeIndex == 4}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(5)" index=5 :class="{blue:changeIndex == 5}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(6)" index=6 :class="{blue:changeIndex == 6}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(7)" index=7 :class="{blue:changeIndex == 7}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(8)" index=8 :class="{blue:changeIndex == 8}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(9)" index=9 :class="{blue:changeIndex == 9}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(10)" index=10 :class="{blue:changeIndex == 10}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(11)" index=11 :class="{blue:changeIndex == 11}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(12)" index=12 :class="{blue:changeIndex == 12}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(13)" index=13 :class="{blue:changeIndex == 13}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(14)" index=14 :class="{blue:changeIndex == 14}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(15)" index=15 :class="{blue:changeIndex == 15}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(16)" index=16 :class="{blue:changeIndex == 16}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(17)" index=17 :class="{blue:changeIndex == 17}">家用电器/运营商/数码</div>
-        <div @mouseenter="changeblue(18)" index=18 :class="{blue:changeIndex == 18}">家用电器/运营商/数码</div>
-    </div>
-    <div class="erji" v-show="erjishow">
-        <div class="erji_title">
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-        </div>
-        <div class="erji_list">
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-        </div>
-        <div class="erji_list">
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-        </div>
-        <div class="erji_list">
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-        </div>
-        <div class="erji_list">
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-        </div>
-        <div class="erji_list">
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-        </div>
-        <div class="erji_list">
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-            <div @click="searchlist_2" data-search="5">箱包</div>
-        </div>
+  <div class="sanjishowlist" v-show="sanjilistshowa" @mouseleave="deleteblue">
+                        <div class="main_1_1" @mousemove="erjilistshow" @mouseout="erjinone">
+                                <div class="main_1_1_1" >
+                                    <div @mouseenter="changeblue(1)" index=1 :class="{blue:changeIndex == 1}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(2)" index=2 :class="{blue:changeIndex == 2}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(3)" index=3 :class="{blue:changeIndex == 3}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(4)" index=4 :class="{blue:changeIndex == 4}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(5)" index=5 :class="{blue:changeIndex == 5}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(6)" index=6 :class="{blue:changeIndex == 6}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(7)" index=7 :class="{blue:changeIndex == 7}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(8)" index=8 :class="{blue:changeIndex == 8}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(9)" index=9 :class="{blue:changeIndex == 9}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(10)" index=10 :class="{blue:changeIndex == 10}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(11)" index=11 :class="{blue:changeIndex == 11}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(12)" index=12 :class="{blue:changeIndex == 12}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(13)" index=13 :class="{blue:changeIndex == 13}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(14)" index=14 :class="{blue:changeIndex == 14}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(15)" index=15 :class="{blue:changeIndex == 15}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(16)" index=16 :class="{blue:changeIndex == 16}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(17)" index=17 :class="{blue:changeIndex == 17}" >家用电器/运营商/数码</div>
+                                    <div @mouseenter="changeblue(18)" index=18 :class="{blue:changeIndex == 18}" >家用电器/运营商/数码</div>
+                                </div>
+                                <div class="erji" v-show="erjishow">
+                                    <div class="erji_title">
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                    </div>
+                                    <div class="erji_list">
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                    </div>
+                                    <div class="erji_list">
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                    </div>
+                                    <div class="erji_list">
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                    </div>
+                                    <div class="erji_list">
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                    </div>
+                                    <div class="erji_list">
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                    </div>
+                                    <div class="erji_list">
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                        <div @click="searchlist_2" data-search="5">箱包</div>
+                                    </div>
 
-    </div>
-  </div>
+                                </div>
+                            </div>
+                    </div>
 </template>
 
 <script>
@@ -104,8 +106,12 @@ export default {
   name: 'Nav',
   data() {
     return {
-        erjishow:true,
-        changeIndex:-1
+        searchvalue:"",
+        sanjishowbtn:true,
+        erjishow:false,
+        changeIndex:-1,
+        sanjilistshowa:'',
+        
     };
   },
   computed:{
@@ -115,6 +121,29 @@ export default {
    
   },
   methods: {
+     gotosearchhome(){
+        this.$router.push({
+            name:'searchlist',
+            params:{keyword:this.searchvalue || undefined }  //undefined 解决所传数据为空字符串报错
+        })
+    },
+    gotohome(){
+        
+        this.$router.push({
+            name:'home'
+        })
+        this.searchvalue='';
+    },
+    searchinput(){
+        this.$store.state.home.bbb=this.$refs.searchvalue;
+    },
+    showsanji(){
+      
+       this.sanjilistshowa=true;
+    },
+    nosanji(){
+       this.sanjilistshowa = false;
+    },
     erjilistshow(){
         this.erjishow = true;
     },
@@ -138,14 +167,12 @@ export default {
         this.changeIndex = -1;
     },
     searchlist_2(e){
-        this.erjishow = false;
-        
-        router.push({
-            name: 'login',
-            query:{listparams:2}
-        });
-       
-    }
+        let a = e.target.dataset.search;
+        this.$router.push({
+            name:'searchlist',
+            query:{searchval: a}  //undefined 解决所传数据为空字符串报错
+        })
+    },
   },
   mounted(){
     console.log(this.$route.name)

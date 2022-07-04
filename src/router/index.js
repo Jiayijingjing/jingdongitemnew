@@ -48,7 +48,7 @@ VueRouter.prototype.replace = function (location, res, rej) {
             component:List,
             meta:{
                 footshow:true,
-                sanji:false
+                sanji:true
             }
           
         },
@@ -58,7 +58,7 @@ VueRouter.prototype.replace = function (location, res, rej) {
           component:Searchhome,
           meta:{
               footshow:false,
-              sanji:true
+              sanji:false
           },
           
       },
