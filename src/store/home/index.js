@@ -7,6 +7,7 @@ const state = {
     sanjilistsh:true,
     ddd:'',
     inputdom:{},
+    ceshishuju:'命名空间',
 };
 
 const mutations = {
@@ -26,10 +27,16 @@ const actions = {
  };
 
 const getters = {
-    
+    ceshidataa(state){
+        return state.ceshishuju+'测试1';
+    },
+    ceshidatab(states){
+        return state.ceshishuju+'测试2';
+    }
 };
 
 export default {
+    namespaced:true,  //命名空间，多模块时必须配置，防止重名
     state,
     mutations,
     actions,

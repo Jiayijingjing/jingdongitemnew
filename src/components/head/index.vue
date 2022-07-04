@@ -164,16 +164,12 @@ export default {
         this.$store.state.home.inputdom.value = '';
     },
     gotohome(){
-        
         this.$router.push({
             name:'home'
         })
         this.searchvalue='';
     },
-  
     showsanji(){
-       
-       
        if(this.$route.name == 'searchlist'){
             this.sanjilistshowa=true;
        }

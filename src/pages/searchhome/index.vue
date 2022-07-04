@@ -129,12 +129,17 @@
          <div>小米</div>
       </div>
     </div>
-
+    <div class="paixu">
+      <div class="zonghe" @click="paixulist" :class="{redlist:redinfo == 1}" data-in=1>综合<span >排序</span></div>
+      <div class="price" @click="paixulist" :class="{redlist:redinfo ==2}" data-in=2>价格<span >排序</span></div>
+    </div>
+    <div class="ceshimingmingkongjian">{{ceshidataa }}+{{ceshidatab }}</div>
   </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   name: 'Searchhome',
   props: {
@@ -143,12 +148,15 @@ export default {
   computed:{
     aaa(){
       return this.$store.state.home.ddd;
-    }
+    },
+    ...mapGetters('home',['ceshidataa','ceshidatab']),
+   
   },
   data(){
     return {
       paramshow:false,
-      paramval:''
+      paramval:'',
+      redinfo:1,
     }
       
   },
@@ -167,6 +175,11 @@ export default {
              name: 'searchlist',
             
          });
+    },
+    paixulist(e){
+      
+      this.redinfo = e.currentTarget.dataset.in;
+      
     }
   },
   mounted : function(){
@@ -232,5 +245,33 @@ export default {
 }
 .biaogelast{
   border-bottom:1px solid rgb(230, 229, 229) ;
+}
+.paixu{
+  display: flex;
+  flex-direction: row;
+  font-size:16px;
+ 
+}
+.paixu div{
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 4px solid rgb(240, 124, 124);
+  text-align: center;
+   margin-right:30px;
+   margin-top:20px;
+}
+.paixu span{
+  color:rgb(109, 3, 3);
+  font-weight: 800;
+  point-events: none;
+}
+.redlist{
+  background-color:rgb(240, 124, 124);
+}
+.ceshimingmingkongjian{
+  height: 20px;
+  line-height: 20px;
+  margin-top:20px;
 }
 </style>

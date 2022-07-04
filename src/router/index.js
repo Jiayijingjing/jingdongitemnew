@@ -100,7 +100,11 @@ VueRouter.prototype.replace = function (location, res, rej) {
             path:"*",
             redirect:"/home"
         }
-    ]
+    ],
+    //滚动条位置
+    scrollBehavior(to,from,savedPositon){
+      return {x:0,y:0};
+    }
 })
 
 //全局前置路由守卫----切换路由之前，初始化被调用、每次路由切换之前被调用 可利用存储在路由中meta中的数据与用户信息判断用户是否具备权限进入该路由
