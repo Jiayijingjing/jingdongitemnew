@@ -10,7 +10,7 @@ const state = {
 const mutations = {
     CESHIAXIOS(state,ceshidata){
         state.ccc = ceshidata;
-        console.log(state.ccc.from,'1111'+state.ccc.name)
+       
     }
 };
 

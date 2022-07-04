@@ -224,9 +224,6 @@ export default {
         })
          this.sanjilistshowa = false;
     },
-    
-    
-
   },
   mounted : function(){
     if(this.$route.name == 'home')  {
