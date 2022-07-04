@@ -2,7 +2,11 @@
 <div class="main">
 <div class="line"></div>
   <div class="search_home">
-    <div class="biaogetitle">全部结果</div>
+    <div class="biaogetitle">
+        <div>全部结果</div>
+        <div v-if="aaa" @click="deleme">{{aaa}}</div>
+       
+    </div>
     <div class="biaoge">
       <div class="biaoti">
         <div class="biaogehui" @click="jumpsanji">品牌</div>
@@ -136,6 +140,18 @@ export default {
   props: {
     
   },
+  computed:{
+    aaa(){
+      return this.$store.state.home.ddd;
+    }
+  },
+  data(){
+    return {
+      paramshow:false,
+      paramval:''
+    }
+      
+  },
   methods:{
     jumpsanji(){
       
@@ -143,11 +159,23 @@ export default {
              name: 'searchlist',
              query:{cccc:777,kkk:789}
          });
+    },
+    deleme(){
+      this.$store.state.home.ddd = '';
+      this.$store.state.home.inputdom.value = '';
+      this.$router.push({
+             name: 'searchlist',
+            
+         });
     }
   },
   mounted : function(){
-    
+     if(this.$route.params.keyword){
+            this.paramshow = true;
+            this.paramval = this.$route.params.keyword;
+        }
   },
+ 
 }
 </script>
 
@@ -168,7 +196,14 @@ export default {
   height: 60px;
   line-height: 60px;
   font-size: 20px;
-  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.biaogetitle div{
+  width: 120px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
 }
 .search_home{
   width: 1190px;

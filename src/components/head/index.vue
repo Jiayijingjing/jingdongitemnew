@@ -105,7 +105,8 @@
                 </div>
             </div>
             <div class="head_search">
-                <div class="search"><input type="text" value="111" v-model="searchvalue" ref="searchvalue" @change="searchinput"/></div>
+                <!-- <div class="search"><input type="text"  v-model="searchvalue" ref="searchvalue" @change="searchinput"/></div> -->
+                <div class="search"><input type="text"  v-model="searchvalue" ref="searchvalue"></div>
                 <div class="btn_search" @click="gotosearchhome" >搜索</div>
                 <div class="search_tishi">
                     <div>环球影城</div>
@@ -117,7 +118,7 @@
                     <div>环球影城</div>
                 </div>
                 <div class="main_btn">
-                    <div>秒杀</div>
+                    <div >秒杀</div>
                     <div>优惠券</div>
                     <div>PLUS会员</div>
                     <div>品牌闪购</div>
@@ -151,30 +152,16 @@ export default {
         
     };
   },
- 
-//   watch:{
-//      $route: {
-//          // 监听路由参数
-//          handler(newvalue,oldvalue){
-                
-//              if(newvalue.name !== 'home'){
-//                  this.sanjilistshowa = false;
-                 
-//              }else{
-//                 this.sanjilistshowa = false;
-//              }
-//          },
-        
-//      }
 
-  
-//   },
   methods: {
     gotosearchhome(){
         this.$router.push({
             name:'searchlist',
             params:{keyword:this.searchvalue || undefined }  //undefined 解决所传数据为空字符串报错
         })
+        this.$store.state.home.ddd = this.searchvalue;
+        this.searchvalue = '';
+        this.$store.state.home.inputdom.value = '';
     },
     gotohome(){
         
@@ -183,10 +170,10 @@ export default {
         })
         this.searchvalue='';
     },
-    searchinput(){
-        this.$store.state.home.bbb=this.$refs.searchvalue;
-    },
+  
     showsanji(){
+       
+       
        if(this.$route.name == 'searchlist'){
             this.sanjilistshowa=true;
        }
@@ -231,6 +218,8 @@ export default {
           
     }
     this.showsanji();
+    this.$store.state.home.inputdom = this.$refs.searchvalue;
+   
   },
   
 };

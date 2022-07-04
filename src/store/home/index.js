@@ -5,6 +5,8 @@ const state = {
     bbb:{},
     ccc:{},
     sanjilistsh:true,
+    ddd:'',
+    inputdom:{},
 };
 
 const mutations = {
