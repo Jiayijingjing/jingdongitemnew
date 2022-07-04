@@ -3,7 +3,8 @@ import {reqCategoryList} from '../../api'
 const state = {
     aaa:'',
     bbb:{},
-    ccc:{}
+    ccc:{},
+    sanjilistsh:true,
 };
 
 const mutations = {

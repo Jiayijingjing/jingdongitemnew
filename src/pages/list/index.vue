@@ -3,7 +3,8 @@
     <div class="main">
         <div class="main_text">
             <div class="main_1">
-                <Nav />
+                <!-- <Nav /> -->
+                <div class="aaa"></div>
                 <div class="main_hui"></div>
                 <div class="main_1_2">
                     <div class="swiper-container">
@@ -142,6 +143,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.aaa{
+    width: 190px;
+    height: 450px;
+}
 .total{
   
     margin: 0 auto;

@@ -5,6 +5,18 @@
     <div class="biaogetitle">全部结果</div>
     <div class="biaoge">
       <div class="biaoti">
+        <div class="biaogehui" @click="jumpsanji">品牌</div>
+        <div>小米</div>
+         <div>小米</div>
+         <div>小米</div>
+         <div>小米</div>
+         <div>小米</div>
+         <div>小米</div>
+         <div>小米</div>
+         <div>小米</div>
+         <div>小米</div>
+      </div>
+       <div class="biaoti" @click="jumpsanji">
         <div class="biaogehui">品牌</div>
         <div>小米</div>
          <div>小米</div>
@@ -16,19 +28,7 @@
          <div>小米</div>
          <div>小米</div>
       </div>
-       <div class="biaoti">
-        <div class="biaogehui">品牌</div>
-        <div>小米</div>
-         <div>小米</div>
-         <div>小米</div>
-         <div>小米</div>
-         <div>小米</div>
-         <div>小米</div>
-         <div>小米</div>
-         <div>小米</div>
-         <div>小米</div>
-      </div>
-       <div class="biaoti">
+       <div class="biaoti" @click="jumpsanji">
         <div class="biaogehui">品牌</div>
         <div>小米</div>
          <div>小米</div>
@@ -65,7 +65,7 @@
          <div>小米</div>
       </div>
       <div class="biaoti">
-        <div class="biaogehui">品牌</div>
+        <div class="biaogehui" >品牌</div>
         <div>小米</div>
          <div>小米</div>
          <div>小米</div>
@@ -137,7 +137,13 @@ export default {
     
   },
   methods:{
-    
+    jumpsanji(){
+      
+       this.$router.push({
+             name: 'searchlist',
+             query:{cccc:777,kkk:789}
+         });
+    }
   },
   mounted : function(){
     

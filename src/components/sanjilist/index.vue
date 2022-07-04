@@ -98,18 +98,21 @@
 
 <script>
 import _ from "lodash"
+import router from '../../router'
 
 export default {
   name: 'Nav',
   data() {
     return {
-        erjishow:false,
+        erjishow:true,
         changeIndex:-1
     };
   },
   computed:{
   },
+
   watch:{
+   
   },
   methods: {
     erjilistshow(){
@@ -136,12 +139,17 @@ export default {
     },
     searchlist_2(e){
         this.erjishow = false;
-        this.$router.push({
-            name: 'searchlist',
+        
+        router.push({
+            name: 'login',
             query:{listparams:2}
         });
        
     }
+  },
+  mounted(){
+    console.log(this.$route.name)
+   
   },
 };
 </script>
